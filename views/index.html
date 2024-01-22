@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app, the best in the world</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     <script src="/countryscript.js"></script>
+     <style>
+        #map { height: 400px; 
+                width: 700px;}
+     </style>
+
+</head>
+
+<body>
+    <h3>The temperature is</h3>
+    <form action="/weather" method="get">
+        <input type="text" id="cityInput" name="city" placeholder="Enter city name" />
+        <button type="submit">Get Weather</button>
+    </form>
+
+
+    <div id="weather-info">
+        <h3 id="temp">Temperature is: </h3>
+        <h3 id="weatherDesc">Weather is: </h3>
+        <h3 id="latitude">Latitude is: </h3>
+        <h3 id="longitude">Longitude is: </h3>
+        <h3 id="feelsLike">feelsLike is: </h3>
+        <h3 id="humidity">humidity is: </h3>
+        <h3 id="pressure">Pressure is: </h3>
+        <h3 id="windspeed">windspeed is: </h3>
+        <h3 id="countryCode">Country code is: </h3>
+        <img id="weatherImage" src="">
+    </div>
+
+    <div id="country-info"></div>
+
+    <div id="flag-info">
+        <img id="countryFlag" src="">
+    </div>
+
+
+    <div id="map"></div>
+</body>
+
+</html>
